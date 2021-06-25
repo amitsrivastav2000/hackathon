@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 60%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.b{
+  margin-left: 45%;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75{
+    width: 100%;
+    margin-top: 0;
+  }
+  input[type=submit] {
+    margin-left: 0;
+  }
+  .b{
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+</style>
+<link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<div class="container">
+  <form action="">
+  <div class="row">
+    <div class="col-25">
+      <label for="name">To:</label>
+    </div>
+    <div class="col-75">
+      <input type="email" name="name" id="name" required />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Cc:</label>
+    </div>
+    <div class="col-75">
+      <input type="email" name="email" id="email" required />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label>Subject</label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="Subject:" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label>Schedule Selector</label>
+    </div>
+    <div class="col-75">
+      <select id="schedule" name="">
+        <option value="recurring">Recurring</option>
+        <option value="weekly">Weekly</option>
+        <option value="monthly">Monthly</option>
+        <option value="yearly">Yearly</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Body</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-75">
+    <input type="submit" value="Send Mail">
+  </div>
+  </div>
+  </form>
+</div>
+
+<footer>
+
+<p class="b" style="margin-top: 100px;">© Copyright 2021. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
